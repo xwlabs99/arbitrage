@@ -4,7 +4,7 @@
   "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
   "type": "module",
   "engines": {
-    "node": ">= 20.9 < 21"
+    "node": ">= 18 < 21"
   },
   "devDependencies": {
     "@types/jest": "~29.5",
@@ -19,9 +19,12 @@
     "rimraf": "~5.0",
     "ts-api-utils": "~1.0",
     "ts-jest": "~29.1",
-    "typescript": "~5.3"
+    "typescript": "~5.3",
+    "tsx": "^4.7.0"
   },
   "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "dev:start": "tsx src/main.ts",
     "start": "node build/src/main.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
